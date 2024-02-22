@@ -1,0 +1,42 @@
+@use "../../abstracts" as abst;
+
+.footer {
+  &-content {
+    padding: 130px 0 50px;
+  }
+
+  &-top {
+    margin-bottom: 80px;
+    @include abst.flexBox(((justify-content: space-between)));
+  }
+
+  &-heading {
+    color: #2e2e2e;
+    font-size: 18px;
+    @include abst.fontWeight("medium");
+    line-height: calc(27 / 18);
+    margin-bottom: 25px;
+  }
+
+  &-column {
+    flex-shrink: 0;
+  }
+
+  &-links {
+    @include abst.flexBox(((flex-direction: column, gap: 18px)));
+  }
+
+  &-link {
+    @include abst.flexBox(((align-items: center, gap: 9px)));
+    color: #535353;
+    font-size: 16px;
+    line-height: calc(24 / 16);
+  }
+
+  &-bottom p {
+    color: #b0b5b4;
+    font-size: 18px;
+    line-height: calc(27 / 18);
+    text-align: center;
+  }
+}

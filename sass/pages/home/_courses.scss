@@ -1,0 +1,130 @@
+@use "../../abstracts" as abst;
+
+.courses {
+  &-content {
+    margin-bottom: 79px;
+    span {
+      color: abst.$gray-76;
+      font-size: 12px;
+      @include abst.fontWeight("bold");
+      line-height: calc(18 / 12);
+    }
+  }
+
+  &-heading {
+    margin-block: 18px 19px;
+    font-size: 42px;
+    line-height: calc(63 / 42);
+  }
+
+  &-caption {
+    color: abst.$gray-76;
+    font-size: 18px;
+    line-height: calc(32 / 18);
+    max-width: 525px;
+
+    &-wrapper {
+      @include abst.flexBox(
+        ((align-items: center, justify-content: space-between))
+      );
+    }
+  }
+
+  &-viewall {
+    color: abst.$bg-primary;
+    @include abst.fontWeight("bold");
+    font-size: 14px;
+    line-height: calc(21 / 14);
+    text-decoration-line: underline;
+  }
+
+  &-list {
+    @include abst.flexBox(((gap: 47px)));
+  }
+
+  &-item {
+    width: calc((100% / 3) - (94px / 3));
+    position: relative;
+  }
+
+  &-image {
+    @include abst.size(359px, 393px);
+    object-fit: cover;
+    border-radius: 8px;
+    opacity: 0.7;
+    background-color: #d0efed;
+  }
+
+  &-detail {
+    @include abst.size(325px, 195px);
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 16px 90px 0px rgba(0, 0, 0, 0.051);
+    position: absolute;
+    left: 17px;
+    top: 322px;
+    padding: 18px 25px 29px;
+
+    .heading {
+      font-size: 22px;
+      line-height: calc(33 / 22);
+      margin-bottom: 16px;
+    }
+  }
+
+  &-price {
+    color: abst.$text-heading;
+    @include abst.fontWeight("bold");
+    font-size: 22px;
+    line-height: calc(33 / 22);
+  }
+
+  &-text {
+    color: abst.$gray-76;
+    font-size: 16px;
+    line-height: calc(24 / 16);
+    margin-right: 5px;
+  }
+
+  &-desc {
+    line-height: calc(21 / 14);
+    margin-block: 6px 18px;
+  }
+
+  &-stactic {
+    line-height: calc(21 / 14);
+  }
+
+  &-classes {
+    position: relative;
+    padding-left: 15px;
+    margin-right: 10px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      @include abst.size(6px);
+      border-radius: 100rem;
+      background-color: abst.$bg-primary;
+    }
+  }
+
+  &-month {
+    position: relative;
+    padding-left: 15px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      @include abst.size(6px);
+      border-radius: 100rem;
+      background-color: abst.$bg-primary;
+    }
+  }
+}

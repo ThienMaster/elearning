@@ -1,0 +1,28 @@
+//- /*---------- Mixin Features Item ----------*/
+mixin featuresItem(image, alt, title, desc)
+  li.features-item
+    img(src= image, alt= alt)
+    a.features-title(href="#!")= title
+    p.features-desc= desc
+
+//- /*---------- Mixin Courses Item ----------*/
+mixin coursesItem(image, alt, heading, text, price, desc, classes, month)
+  li.courses-item
+    a(href="#!")
+      img.courses-image(src= image, alt= alt)
+    .courses-detail
+      a(href="#!")
+        h3.heading= heading
+      .courses-price-wrapper
+        span.courses-text= text
+        span.courses-price= price
+      .courses-desc= desc
+      .courses-static
+        span.courses-classes= classes
+        span.courses-month= month
+
+//- /*---------- Mixin Countdown Item ----------*/
+mixin countdownItem(heading, caption)
+  li.countdown-item
+    h3.heading.countdown-heading= heading
+    p.countdown-caption= caption

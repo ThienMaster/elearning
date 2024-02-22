@@ -1,0 +1,270 @@
+@use "../../abstracts" as abst;
+
+.header {
+  padding: 52px 0 79px;
+
+  &-nav-container {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+  }
+
+  &-menu {
+    margin-inline: auto 177px;
+    @include abst.flexBox(((align-items: center, gap: 40px)));
+
+    &-link {
+      color: abst.$black-2F;
+      font-size: 16px;
+      line-height: calc(24 / 16);
+
+      &:hover {
+        text-shadow: 1px 0 0 currentColor;
+      }
+    }
+  }
+
+  &-btn {
+    @include abst.flexBox(((align-items: center, gap: 24px)));
+
+    .button {
+      font-size: 16px;
+      line-height: calc(24 / 16);
+      padding: 12px 24px;
+      color: abst.$bg-primary;
+      transition: all 0.2s linear;
+    }
+
+    .button-signin {
+      border: none;
+      color: #494949;
+      font-weight: 400;
+
+      &:hover {
+        color: #2f3a3b;
+        text-shadow: 1px 0 0 currentColor;
+      }
+    }
+
+    .button-signup:hover {
+      background-color: abst.$bg-primary;
+      color: #fff;
+    }
+  }
+}
+
+.hero {
+  margin-top: 50px;
+
+  &-container {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+  }
+
+  &-content {
+    width: 100%;
+    max-width: 458px;
+  }
+
+  &-title {
+    color: abst.$gray-76;
+    font-size: 14px;
+    line-height: calc(21 / 14);
+  }
+
+  &-heading {
+    font-size: 62px;
+    line-height: calc(72 / 62);
+    margin-block: 18px 46px;
+  }
+
+  &-caption {
+    max-width: 374px;
+    font-size: 18px;
+    line-height: calc(32 / 18);
+    margin-bottom: 52px;
+  }
+
+  &-links {
+    @include abst.flexBox(((align-items: center, gap: 50px)));
+  }
+
+  &-button {
+    font-size: 18px;
+    line-height: calc(27 / 18);
+    background-color: abst.$bg-primary;
+    padding: 20px 40px;
+    border-radius: 14px;
+    box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.051);
+    transition: all 0.2s linear;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  &-play {
+    @include abst.size(62px);
+    color: abst.$bg-primary;
+    background-color: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    @include abst.flexBox(((align-items: center, justify-content: center)));
+    border-radius: 100rem;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    font-size: 22px;
+
+    &:hover {
+      background-color: abst.$bg-primary;
+      color: #fff;
+    }
+  }
+
+  &-media {
+    position: relative;
+  }
+
+  &-courses {
+    padding: 17px 25px;
+    @include abst.flexBox(((align-items: center, gap: 16px)));
+    @include abst.size(157px, 75px);
+    background-color: #fefefd;
+    box-shadow: 0px 10px 80px 0px rgba(0, 0, 0, 0.051);
+    border-radius: 18px;
+    position: absolute;
+    top: 149px;
+    left: -40px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 45px;
+      left: 29px;
+      @include abst.size(28px, 4px);
+      background-color: #fff;
+      border-radius: 100rem;
+    }
+
+    span {
+      color: abst.$text-heading;
+      @include abst.fontWeight("medium");
+      font-size: 10px;
+      line-height: calc(15 / 10);
+    }
+  }
+
+  &-active {
+    @include abst.size(207px, 90px);
+    background-color: #fefefd;
+    box-shadow: 0px 12px 80px 0px rgba(0, 0, 0, 0.05);
+    border-radius: 24px;
+    padding: 17px 35px;
+    position: absolute;
+    right: 45px;
+    bottom: 41px;
+
+    &-title {
+      display: inline-block;
+      color: abst.$text-heading;
+      @include abst.fontWeight("medium");
+      font-size: 10px;
+      line-height: calc(15 / 10);
+      margin-bottom: 8px;
+    }
+  }
+
+  &-avatar {
+    @include abst.flexBox(((align-items: center, justify-content: center)));
+
+    &-1 {
+      margin-left: 0;
+    }
+
+    &-2,
+    &-3,
+    &-4,
+    &-more {
+      margin-left: -7px;
+    }
+
+    &-more {
+      @include abst.size(33px);
+      background-color: abst.$bg-primary;
+      @include abst.flexBox(((align-items: center, justify-content: center)));
+      border-radius: 100rem;
+
+      span {
+        color: #fff;
+        @include abst.fontWeight("medium");
+        font-size: 10px;
+        line-height: calc(15 / 10);
+      }
+    }
+  }
+
+  &-schedules {
+    padding: 16px 25px 23px;
+    background-color: #fff;
+    box-shadow: 0px 10px 80px 0px rgba(0, 0, 0, 0.051);
+    border-radius: 24px;
+    position: absolute;
+    left: -65px;
+    bottom: 46px;
+
+    span {
+      display: block;
+      color: abst.$text-heading;
+      @include abst.fontWeight("medium");
+      font-size: 10px;
+      line-height: calc(15 / 10);
+      margin-bottom: 16px;
+      text-align: center;
+    }
+  }
+
+  &-activity-bar {
+    &:not(:last-of-type) {
+      @include abst.size(74px, 6px);
+      background-color: #edf1f5;
+      border-radius: 3px;
+    }
+
+    &:last-of-type {
+      @include abst.size(26px, 6px);
+      background-color: #edf1f5;
+      border-radius: 3px;
+    }
+
+    &:first-of-type {
+      margin-bottom: 12px;
+      .hero-activity-bar-progress {
+        @include abst.size(39px, 6px);
+        background-color: #fb9899;
+        border-radius: inherit;
+      }
+    }
+
+    &:nth-of-type(2) {
+      margin-bottom: 10px;
+      .hero-activity-bar-progress {
+        @include abst.size(51px, 6px);
+        background-color: #fb9899;
+        border-radius: inherit;
+      }
+    }
+
+    &:nth-of-type(3) {
+      margin-bottom: 16px;
+      .hero-activity-bar-progress {
+        @include abst.size(33px, 6px);
+        background-color: #fb9899;
+        border-radius: inherit;
+      }
+    }
+
+    &:last-of-type {
+      margin: 0 auto;
+    }
+  }
+}

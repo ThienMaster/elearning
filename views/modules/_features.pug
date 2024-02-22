@@ -1,0 +1,17 @@
+-
+  var features_list = [
+    {image: "./images/features/features.png", alt: "Live Class", title: "Live Class", desc: "We are providing live classes with the best teacher for you"},
+    {image: "./images/features/features_1.png", alt: "Discuss", title: "Discuss", desc: "Conversation with teachers or another students about task or any other thing"},
+    {image: "./images/features/features_2.png", alt: "Task", title: "Task", desc: "We give every of our students task for gathering knowledge at home"}
+  ];
+
+section.features
+  .container
+    .features-wrapper
+      .features-content
+        span F E A T U R E S
+        h2.heading.features-heading We are providing suitable features for students.
+        p.features-caption Read our awesome feature that is absolutely suit for you. Explore the feature and know the best.
+      ul.features-list
+        each features_item in features_list
+          +featuresItem(features_item.image, features_item.alt, features_item.title, features_item.desc)

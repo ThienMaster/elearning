@@ -1,0 +1,18 @@
+-
+  var courses_list = [
+    {image: "./images/courses/courses_1.png", alt: "Web Design", heading: "Web Design", text: "Fee", price: "$200", desc: "Web design basic to higer level", classes: "40 Classes", month: "3 Months"},
+    {image: "./images/courses/courses_2.png", alt: "Web Development", heading: "Web Development", text: "Fee", price: "$250", desc: "Web development basic to higer level", classes: "30 Classes", month: "3 Months"},
+    {image: "./images/courses/courses_3.png", alt: "UI/UX Design", heading: "UI/UX Design", text: "Fee", price: "$350", desc: "UI/UX design basic to higer level", classes: "50 Classes", month: "4 Months"}
+  ];
+
+section.courses
+  .container
+    .courses-content
+      span C O U R S E S
+      h2.heading.courses-heading Popular Courses
+      .courses-caption-wrapper
+        p.courses-caption Check out our most poular courses that suit for you. Here you can find your favourite one.
+        a.courses-viewall(href="#!") View All Courses
+    ul.courses-list
+      each courses_item in courses_list
+        +coursesItem(courses_item.image, courses_item.alt, courses_item.heading, courses_item.text, courses_item.price, courses_item.desc, courses_item.classes, courses_item.month)

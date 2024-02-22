@@ -1,0 +1,105 @@
+@use "../../abstracts" as abst;
+
+.testimonial {
+  margin-bottom: 130px;
+
+  &-content {
+    @include abst.flexBox(((gap: 72px)));
+  }
+
+  &-info {
+    max-width: 419px;
+    padding: 37px 0;
+
+    blockquote {
+      color: abst.$gray-5D;
+      font-size: 32px;
+      line-height: calc(48 / 32);
+      margin-block: 27px 33px;
+    }
+
+    p {
+      color: #070707;
+      font-size: 16px;
+      line-height: calc(24 / 16);
+      @include abst.fontWeight("medium");
+      position: relative;
+      padding-left: 15px;
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        @include abst.size(8px, 2px);
+        background-color: #070707;
+      }
+    }
+
+    span {
+      color: abst.$gray-76;
+      font-weight: 400;
+    }
+  }
+
+  &-controls {
+    @include abst.flexBox(((gap: 30px)));
+    margin-top: 52px;
+
+    .btn-icon {
+      @include abst.flexBox(((align-items: center, justify-content: center)));
+      @include abst.size(50px);
+      border-radius: 100rem;
+      background-color: abst.$bg-primary;
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.2s linear;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &-avatar {
+    flex: 1;
+    position: relative;
+
+    &-1 {
+      position: absolute;
+      top: 0;
+      right: 443px;
+    }
+
+    &-2 {
+      position: absolute;
+      right: 0;
+      top: 19px;
+    }
+
+    &-3 {
+      position: absolute;
+      top: 107px;
+      right: 171px;
+    }
+
+    &-4 {
+      position: absolute;
+      left: 0;
+      bottom: 145px;
+    }
+
+    &-5 {
+      position: absolute;
+      bottom: 0;
+      right: 389px;
+    }
+
+    &-6 {
+      position: absolute;
+      right: 32px;
+      bottom: 29px;
+    }
+  }
+}

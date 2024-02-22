@@ -1,0 +1,13 @@
+-
+  var countdown_list = [
+    {heading: "100+", caption: "Popular Courses"},
+    {heading: "500+", caption: "Skilled Trainer"},
+    {heading: "1M+", caption: "Student Learning"}
+  ];
+
+section.countdown
+  .container
+    .countdown-wrapper
+      ul.countdown-list
+        each countdown_item in countdown_list
+          +countdownItem(countdown_item.heading, countdown_item.caption)

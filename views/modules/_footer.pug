@@ -1,0 +1,36 @@
+footer.footer
+  .container
+    .footer-content
+      .footer-top
+        .footer-column
+          a.logo(href="/")
+            img(src="./images/Logo.svg", alt="Logo Besnik.")
+        .footer-column
+          h3.footer-heading Company
+          ul.footer-links
+            each link in ["About", "Careers", "Press"]
+              li.footer-link-item
+                a.footer-link(href="#!")= link
+        .footer-column
+          h3.footer-heading Community
+          ul.footer-links
+            each link in ["Team Plans", "Blog", "Students", "Schoolarships"]
+              li.footer-link-item
+                a.footer-link(href="#!")= link
+        .footer-column
+          h3.footer-heading Teaching
+          ul.footer-links
+            each link in ["Become a teacher", "Teaching academy"]
+              li.footer-link-item
+                a.footer-link(href="#!")= link
+        .footer-column
+          h3.footer-heading Be social
+          ul.footer-links
+            each link in [{image: "./images/socials/twitter.svg", alt: "Twitter", link: "Twitter"}, {image: "./images/socials/facebook.svg", alt: "Facebook", link: "Facebook"}, {image: "./images/socials/instagram.svg", alt: "Instagram", link: "Instagram"}, {image: "./images/socials/linked-in.svg", alt: "Linked-in", link: "Linkedin"},]
+              li.footer-link-item
+                a.footer-link(href="#!")
+                  img(src= link.image, alt= link.alt)
+                  span= link.link
+      .footer-bottom
+        p © Copyright 2020 by Mayad Ahmed. All right reserved.
+    </p>

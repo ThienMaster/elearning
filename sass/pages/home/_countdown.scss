@@ -1,0 +1,27 @@
+@use "../../abstracts" as abst;
+
+.countdown {
+  margin: 265px 0;
+
+  &-wrapper {
+    max-width: 862px;
+    margin: 0 auto;
+  }
+
+  &-list {
+    @include abst.flexBox(((justify-content: space-between)));
+  }
+
+  &-heading {
+    font-size: 62px;
+    line-height: calc(93 / 62);
+    text-align: center;
+  }
+
+  &-caption {
+    color: abst.$gray-76;
+    font-size: 18px;
+    line-height: calc(27 / 18);
+    text-align: center;
+  }
+}

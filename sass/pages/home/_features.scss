@@ -1,0 +1,63 @@
+@use "../../abstracts" as abst;
+
+.features {
+  margin: 130px 0;
+
+  &-wrapper {
+    width: 100%;
+    max-width: 1024px;
+  }
+
+  &-content {
+    max-width: 591px;
+    margin-bottom: 80px;
+
+    span {
+      color: abst.$gray-76;
+      font-size: 12px;
+      @include abst.fontWeight("bold");
+      line-height: calc(18 / 12);
+    }
+  }
+
+  &-heading {
+    font-size: 42px;
+    line-height: calc(56 / 42);
+    margin: 18px 0;
+  }
+
+  &-caption {
+    color: abst.$gray-76;
+    font-size: 18px;
+    line-height: calc(27 / 18);
+  }
+
+  &-list {
+    @include abst.flexBox(((justify-content: space-between)));
+  }
+
+  &-item {
+    &:first-child {
+      max-width: 168px;
+    }
+
+    &:nth-child(2),
+    &:last-child {
+      max-width: 223px;
+    }
+  }
+
+  &-title {
+    display: inline-block;
+    margin-block: 26px 16px;
+    color: abst.$text-heading;
+    font-size: 20px;
+    @include abst.fontWeight("semibold");
+    line-height: calc(30 / 20);
+  }
+
+  &-desc {
+    font-size: 16px;
+    line-height: calc(27 / 16);
+  }
+}

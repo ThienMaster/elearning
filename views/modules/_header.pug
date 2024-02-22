@@ -1,0 +1,42 @@
+header.header
+  nav.header-nav
+    .container.header-nav-container
+      a.logo(href="/")
+        img(src="./images/Logo.svg", alt="Logo Besnik.")
+      ul.header-menu
+        each menu in [{href: "/", title: "Home"}, {href: "#!", title: "Features"}, {href: "#!", title: "Pricing"}, {href: "#!", title: "About"}, {href: "#!", title: "Contact"}]
+          li.header-menu-item
+            a.header-menu-link(href= menu.href)= menu.title
+      .header-btn
+        a.button.button-signin(href="#!") Sign in
+        a.button.button-signup(href="#!") Sign up
+  .hero
+    .container.hero-container
+      .hero-content
+        p.hero-title 😎 EASY LEARNING PLATFORM
+        h1.heading.hero-heading Words learner come here.
+        p.hero-caption Build skills with courses, certificates, and get online knowledge from our <br> world-class platform.
+        .hero-links
+          a.button.hero-button(href="#!") Get Started
+          a.hero-play
+            i.fa-solid.fa-play
+      .hero-media
+        img.hero-image(src="./images/hero.png", alt="andrea-piacquadio")
+        .hero-courses
+          img(src="./images/Book.svg", alt="book")
+          span Courses 1000+
+        .hero-schedules
+          span Schedules
+          each val in [1, 2, 3, 4]
+            .hero-activity-bar
+              .hero-activity-bar-progress
+        .hero-active
+          span.hero-active-title Our Active Students
+          .hero-avatar
+            img.hero-avatar-1(src="./images/actives/active_1.svg", alt="avatar-1")
+            img.hero-avatar-2(src="./images/actives/active_2.svg", alt="avatar-2")
+            img.hero-avatar-3(src="./images/actives/active_3.svg", alt="avatar-3")
+            img.hero-avatar-4(src="./images/actives/active_4.svg", alt="avatar-4")
+            .hero-avatar-more
+              span 10K+
+
